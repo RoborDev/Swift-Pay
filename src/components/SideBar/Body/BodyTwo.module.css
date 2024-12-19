@@ -1,0 +1,115 @@
+/* General Styling */
+.bodyMain {
+  position: relative; 
+  background-color: #f6f7f8;
+  width: 100%;
+  border-radius: 28px;
+  min-height: 100vh; 
+  transition: background-color 0.3s ease;
+}
+
+/* Card Layout */
+.cardLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f8f9fa;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Card */
+.card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 20px;
+}
+
+/* Header with Image */
+.headerContainer {
+  position: relative;
+  padding: 20px;
+  background-color: #e9f4f8;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.headerTitle {
+  font-size: 20px;
+  color: #1b212b;
+  font-weight: bold;
+  margin: 0;
+  z-index: 2;
+}
+
+.addBalanceImage {
+  position: absolute;
+  top: -96px;
+  right: 20px;
+  height: 190px;
+  width: 490px;
+  z-index: 1;
+}
+
+/* Body Content */
+.bodyContent {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.leftColumn {
+  flex: 0 0 55%;
+  width: 100%;
+}
+
+.rightColumn {
+  flex: 0 0 45%;
+  width: 100%;
+}
+
+/* Media Query for Mobile and Smaller Devices */
+@media (max-width: 768px) {
+  .bodyMain {
+    overflow: hidden; /* Prevent overflow on mobile size */
+  }
+
+  .bodyContent {
+    overflow: hidden; /* Prevent overflow in body content */
+  }
+
+  .leftColumn,
+  .rightColumn {
+    overflow: hidden; /* Prevent overflow in both columns */
+  }
+
+  .addBalanceImage {
+    top: -30px;
+    right: 50px;
+    height: 210px;
+    width: 400px;
+    border-radius: 18px;
+  }
+}
+
+/* Additional Media Query for very small mobile devices (optional) */
+@media (min-width: 390px) and (max-width: 430px) {
+  .addBalanceImage {
+    top: -30px;
+    right: 30px;
+    height: 200px;
+    width: 96%;
+    border-radius: 18px;
+  }
+}

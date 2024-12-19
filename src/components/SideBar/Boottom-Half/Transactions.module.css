@@ -1,0 +1,44 @@
+.transactions {
+  margin: 20px 0;
+}
+
+
+.transactionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.transactionsHeader h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1b212b;
+}
+
+.seeAll {
+  font-size: 14px;
+  color: #0f1017;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.rightImg {
+  margin-left: 8px;
+}
+
+.transactionsList { /* Updated to camelCase */
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.transactionItem { /* Updated to camelCase */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+}

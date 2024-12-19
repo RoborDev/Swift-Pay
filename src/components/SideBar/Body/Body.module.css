@@ -1,0 +1,76 @@
+/* Body.module.css */
+.bodyMain {
+  position: relative; /* Enable positioning for overlay */
+  background-color: #f6f7f8;
+  width: 100%;
+  border-radius: 28px;
+  min-height: 100vh; /* Ensure it covers the entire viewport */
+  transition: background-color 0.3s ease;
+}
+
+.cardLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f8f9fa;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.bodyContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 10px;
+  position: relative; /* Ensure z-index works properly */
+  z-index: 2; /* Keep content above overlay */
+}
+
+.leftColumn {
+  flex: 0 0 55%;
+  width: 100%;
+}
+
+.rightColumn {
+  flex: 0 0 45%;
+  width: 100%;
+}
+
+.transparentOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(10px);
+  z-index: 1; /* Position it below the content */
+  pointer-events: none; /* Allow clicks to pass through */
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .bodyContent {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+
+  .leftColumn,
+  .rightColumn {
+    flex: 1 0 auto;
+    width: 100%;
+  }
+}

@@ -1,0 +1,156 @@
+
+.sideCard {
+  width: 400px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  background-color: white;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+.sideCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  border-bottom: 1px solid lightgray;
+  padding: 8px 8px 12px 16px; 
+}
+
+
+.sideCardHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sideCardHeader h3 span {
+  font-size: 14px;
+  color: #1b212b; 
+  text-decoration: none;
+  cursor: pointer;
+  display: inline;
+}
+
+.sideCardHeader h3 span:hover {
+  text-decoration: underline;
+}
+
+.copyButton {
+  color: #0f170f;
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Adjust spacing between icon and text */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+.closeButton {
+ display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.sideCardCon {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.sideCardBody {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 12px; 
+  color: #8f949f; 
+  margin: 0;
+}
+
+.value {
+  font-size: 14px; 
+  color: #1b212b; 
+  margin: 4px 0 0;
+  font-weight: 500; 
+}
+
+.sideCardFooter {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.sideCardFooter ul {
+  background-color: #f8f8f8;
+  border-radius: 12px; 
+  padding: 16px 10px; 
+  margin: 0 -10px; 
+  margin-bottom: -20px;
+  font-size: 14px;
+  color: #555; 
+  list-style-position: inside; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #e0e0e0;
+}
+
+.sideCardFooter ul li {
+  margin-bottom: 12px; 
+  line-height: 1.6;
+  color: #1b212b;
+}
+
+
+@media(min-width:390px) and (max-width:430px) {
+  .sideCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sideCardHeader h3 {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 8px;
+  }
+
+  .sideCardHeader h3 span {
+    display: none;
+  }
+
+  .copyButton {
+    margin-right: auto; 
+  }
+
+  .closeButton {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .sideCard {
+    width: 90%;
+    margin: 3px;
+  }
+
+  button span {
+    display: none; 
+}
+}

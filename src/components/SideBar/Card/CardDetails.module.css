@@ -1,0 +1,441 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Main Container Styling */
+.container {
+  display: grid;
+  grid-template-columns: 55% 45%; 
+  gap: 0px;
+  padding: 0; 
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #f6f7f8;
+  border-radius: 20px; 
+  overflow: visible; 
+}
+
+/* Main Card Section */
+.cardMain {
+  background: white;
+  border-radius: 16px; 
+  border: 1px solid lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: visible;
+  width: 100%; 
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-sizing: border-box;
+}
+
+/* Sidebar Section */
+.cardSidebar {
+  background: white;
+  border-radius: 16px;  
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid lightgray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  overflow: visible;
+  margin-top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.cardMain, .cardSidebar {
+  overflow: auto; 
+}
+
+/* Balance Section */
+.balanceSection {
+  text-align: center;
+}
+
+.balanceTitle {
+  font-size: 16px;
+  color: #1b212b;
+  font-weight: 600;
+}
+
+.balanceAmount {
+  font-size: 16px;
+  margin: 0;
+  gap: 4px;
+  color: #8f949f;
+}
+
+.editButton {
+  padding: 3px 5px;
+  border: 1px solid #8f949f;
+  border-radius: 30px;
+  background-color: #fff;
+  font-size: 11px;
+  text-align: center;
+  margin-left: 4px;
+}
+
+.balanceAmount sup {
+  font-size: 14px;
+  color: #8f949f;
+}
+
+.decimal {
+  font-size: 1rem;
+  color: #888;
+  margin-left: 2px;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 22px;
+}
+
+.actionButtons p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.action {
+  text-align: baseline;
+}
+
+.actionIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px 0 0 ;
+}
+
+.add,
+.convert,
+.send,
+.freeze,
+.settings {
+  background: white;
+  border: 1.5px solid #dfe1e7;
+}
+
+/* Transactions Section */
+.transactions {
+  margin-top: 20px;
+}
+
+.transactionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.transactionsHeader h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1b212b;
+}
+
+.seeAll {
+  font-size: 14px;
+  color: #0f1017;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.rightImg {
+  margin-left: 8px;
+}
+
+.transactionsList {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transactionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #dfe1e7;
+}
+
+.transactionDetails {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.transactionDetails p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b212b;
+}
+
+.transactionDetails span {
+  font-size: 12px;
+  color: #8f949f;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.transactionAmount {
+  text-align: right;
+}
+
+/* Sidebar Header */
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  border-bottom: 1px solid lightgray;
+  padding: -2px 8px 11.5px 16px;
+}
+
+.sidebarHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.closeButton {
+  color: #0f170f;
+  background-color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+.copyButton {
+  color: #0f170f;
+  background-color: #fff;
+  border: none;
+  padding: 6px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebarContent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 6px;
+  gap: 7px;
+}
+
+.sideCardBody {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label {
+  font-size: 12px;
+  color: #8f949f;
+  margin: 0;
+}
+
+.value {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  color: #1b212b;
+  margin: 4px 0 0;
+  font-weight: 500;
+}
+
+.shareCon{
+  display: none;
+}
+
+.shareCon p {
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardMain,
+  .cardSidebar {
+    width: 100%;
+  }
+
+  .cardSidebar {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .cardSidebar {
+    display: block; /* Always visible on desktop */
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Hide Sidebar by default on mobile */
+  .cardSidebar {
+    display: none;
+  }
+
+  .cardSidebar.mobileVisible {
+    display: block;
+  }
+
+  .cardSidebar.mobileHidden {
+    display: none;
+  }
+
+  /* Adjust Card Section on Mobile */
+  .cardMain {
+    width: 100%;
+  }
+  .cardSidebar{
+    border-radius: 16px;
+  }
+}
+
+
+@media (min-width: 390px) and (max-width: 430px) {
+
+
+  .cardSidebar {
+    display: none; 
+    margin-bottom: 100px;
+  }
+
+  .cardMain {
+    position: relative; 
+    z-index: 2; 
+    overflow-y: hidden; 
+    /* width: 100%; 
+    height: calc(100vh - 10px);  */
+  }
+
+  .cardSidebar.mobileVisible {
+    display: block;
+    transform: translateX(0);
+  }
+  
+  .cardSidebar.mobileHidden {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .cardMain.hidden {
+    display: none; 
+  }
+
+  .cardSidebar{
+    border-radius: 16px;
+      position: relative; 
+      z-index: 2; 
+  }
+
+  .shareCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px; 
+  }
+  
+  .shareButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5; 
+    border: 1px solid #d1d1d1; 
+    border-radius: 8px; 
+    padding: 10px 16px; 
+    font-size: 14px; 
+    font-weight: 500;
+    color: #000; 
+    cursor: pointer;
+    width: 90%; 
+    max-width: 320px; 
+    text-align: center;
+    gap: 8px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shareButton img {
+    width: 16px; /* Set icon size */
+    height: 16px;
+  }
+
+.inactive {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.mobileHidden {
+  display: none; 
+}
+
+.mobileVisible {
+  display: block; 
+}
+
+.cardSidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(10px);
+  z-index: 2; 
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+}

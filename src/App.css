@@ -1,0 +1,25 @@
+/* App.css */
+.app {
+  display: flex;
+  height: 100vh;  /* Full viewport height */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  height: 100%;
+  position: fixed; /* Fixed position to always stay on the screen */
+  top: 0;
+  left: 0;
+  z-index: 10;  /* Ensure the sidebar stays above the content */
+}
+
+.content {
+  margin-left: 250px;  /* Offset by sidebar width */
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;  /* Allow content to scroll */
+  height: 100vh;  /* Full height of the viewport */
+  transition: margin-left 0.3s ease;  /* Smooth transition for sidebar movement */
+}

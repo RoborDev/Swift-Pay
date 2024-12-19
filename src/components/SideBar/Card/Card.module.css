@@ -1,0 +1,280 @@
+/* Card Container */
+.cardMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  width: 92%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 5px ;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #e0e0e0;
+}
+
+/* Currency Tabs */
+.currencyTabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 10px 11.5px 18px 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.active {
+  color: black;
+  font-weight: 600;
+  position: relative;
+}
+
+.currency img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 4px;
+}
+
+.currency.active {
+  background-color: white;
+  color: #1b212b;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -19px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+  width: 120%;
+}
+
+.currency:hover {
+  color: #333;
+  background-color: transparent;
+}
+
+/* Balance Section */
+.balanceSection {
+  text-align: center;
+}
+
+.balanceTitle {
+  font-size: 14px;
+  color: gray;
+}
+
+.balanceAmount {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.balanceAmount sup {
+  font-size: 14px;
+  color: #8f949f;
+}
+
+.decimal {
+  font-size: 18px;
+  color: #888;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.action {
+  text-align: center;
+  cursor: pointer;
+}
+
+.actionIcon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.send {
+  background: #0f1017;
+  color: white;
+}
+
+.add, .convert {
+  background: white;
+  border: 1.5px solid #dfe1e7;
+}
+
+/* Transactions Section */
+.transactions {
+  margin-top: 20px;
+}
+
+.transactionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.transactionsHeader h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1b212b;
+}
+
+.seeAll {
+  font-size: 14px;
+  color: #0f1017;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rightImg {
+  margin-left: 8px;
+}
+
+.transactionsList {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transactionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #dfe1e7;
+  background-color: #fff;
+}
+
+.transactionDetails {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.transactionDetails p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1b212b;
+}
+
+.transactionDetails span {
+  font-size: 12px;
+  color: #8f949f;
+}
+
+.details{
+  display: none;
+}
+
+
+.transactionAmount {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media screen and (max-width: 430px) {
+  .cardMain {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .currencyTabs {
+    gap: 10px;
+    padding: 10px 3px;
+    font-size: 12px;
+  }
+
+  .currency img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .balanceAmount {
+    font-size: 24px;
+  }
+
+  .actionButtons {
+    gap: 10px;
+  }
+
+  .actionIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .transactionsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .currency.active{
+    font-size: 12px;
+  }
+
+  .details{
+    display: block;    
+  }
+
+  .detailsImage{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+  }
+
+  .active::after {
+    bottom: -11px;
+    width: 110%;
+  }
+}
