@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   width: 90%;
+  height: 94%;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   background-color: white;
@@ -19,7 +20,6 @@
   border-bottom: 1px solid lightgray;
   padding: 8px 8px 12px 16px; 
 }
-
 
 .sideCardHeader h3 {
   margin: 0;
@@ -151,7 +151,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 5px; /* Compact close button */
+    padding: 5px; 
   }
 
   .sideCard {
@@ -162,15 +162,15 @@
     padding: 12px; 
     box-sizing: border-box;
     max-height: calc(100vh - 20px); 
-    overflow-y: auto; /* Allow scrolling for overflow content */
+    overflow-y: auto; 
   }
 
   button span {
     display: none; 
-}
+  }
 }
 
-@media screen and (min-width: 1420px) {
+@media screen and (min-width: 1320px) {
   .sideCard {
     display: flex;
     flex-direction: column;
@@ -186,6 +186,5 @@
 
   .sideCardHeader{
     padding: 2px 8px 3px 16px;
-    /* padding: 8px 8px 12px 16px;   */
   }
 }
