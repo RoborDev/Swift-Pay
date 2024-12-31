@@ -241,7 +241,7 @@ body {
   .active::before {
     content: "";
     position: absolute; 
-    top: 2px; 
+    top: 5px; 
     left: 50%; 
     transform: translateX(-50%);
     width: 100%; 
@@ -258,6 +258,5 @@ body {
     flex-direction: column;
     text-align: center; 
     padding: 15px;
-    background: transparent;
-  }
+    }
 }
