@@ -92,8 +92,8 @@
   
 
   .container {
-    height: calc(100vh - 60px); /* Adjust for footer space */
-    overflow-y: auto; /* Allow scrolling if content exceeds viewport height */
+    height: calc(100vh - 60px); 
+    overflow-y: auto;
   }
 }
 

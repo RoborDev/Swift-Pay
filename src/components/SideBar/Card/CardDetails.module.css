@@ -339,41 +339,40 @@ html, body {
   }
 }
 
-
 @media (min-width: 390px) and (max-width: 430px) {
   .cardSidebar {
-    display: none;
+    display: none; 
     margin-bottom: 100px;
   }
 
   .cardMain {
-    position: relative;
-    z-index: 2;
-    overflow-y: auto; /* Allow scrolling only if necessary */
-    height: 100vh; /* Use full viewport height */
-    padding: 10px; /* Add compact padding for better fit */
-    box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+    position: relative; 
+    z-index: 2; 
+    overflow-y: auto; 
+    height: 80vh;
+    padding: 10px; 
+    box-sizing: border-box; 
   }
 
   .cardSidebar.mobileVisible {
     display: block;
     transform: translateX(0);
   }
-
+  
   .cardSidebar.mobileHidden {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
   }
 
   .cardMain.hidden {
-    display: none;
+    display: none; 
   }
 
-  .cardSidebar {
+  .cardSidebar{
     border-radius: 16px;
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
+      position: relative; 
+      z-index: 2; 
+      bottom: 3git add .0px;
   }
 
   .shareCon {
@@ -381,20 +380,20 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 12px; /* Reduce margin for compactness */
-  }
-
+    margin-top: 12px;
+    }
+  
   .shareButton {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5f5f5;
-    border: 1px solid #d1d1d1;
-    border-radius: 8px;
+    background-color: #f5f5f5; 
+    border: 1px solid #d1d1d1; 
+    border-radius: 8px; 
     padding: 8px 12px; /* Reduce padding */
     font-size: 13px; /* Adjust font size */
     font-weight: 500;
-    color: #000;
+    color: #000; 
     cursor: pointer;
     width: 95%; /* Utilize more width */
     max-width: 300px;
@@ -402,43 +401,43 @@ html, body {
     gap: 6px; /* Reduce gap */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
-
+  
   .shareButton img {
     width: 14px;
     height: 14px;
   }
 
-  .inactive {
-    pointer-events: none;
-    opacity: 0.3;
-  }
-
-  .mobileHidden {
-    display: none;
-  }
-
-  .mobileVisible {
-    display: block;
-  }
-
-  .cardSidebar {
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    z-index: 2;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
+.inactive {
+  pointer-events: none;
+  opacity: 0.3;
 }
 
+.mobileHidden {
+  display: none; 
+}
+
+.mobileVisible {
+  display: block; 
+}
+
+.cardSidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(10px);
+  z-index: 2; 
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+}
 
 @media screen and (min-width: 1220px) {
   .cardMain{
