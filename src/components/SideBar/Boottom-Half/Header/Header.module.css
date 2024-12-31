@@ -37,11 +37,11 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  white-space: nowrap; /* Prevents the button text from breaking onto a new line */
-  position: absolute; /* Position the button at the right */
-  right: 20px; /* Position it to the right side */
-  top: 50%; /* Vertically center it */
-  transform: translateY(-50%); /* Adjust for perfect centering */
+  white-space: nowrap; 
+  position: absolute; 
+  right: 20px;
+  top: 50%; 
+  transform: translateY(-50%); 
 }
 
 /* Add Balance Image Styling */
@@ -61,31 +61,31 @@
   /* Make Add Balance Button Transparent on Mobile */
   .addBalanceButton {
     background-color: #ccc;
-    border: 2px solid #0f1017; /* Add border to retain the button's visibility */
+    border: 2px solid #0f1017; 
     color: #0f1017; 
-    right: 10px; /* Position to the right */
+    right: 10px; 
     top: 50%;
-    transform: translateY(-50%); /* Keep vertically centered */
+    transform: translateY(-50%);
   }
 
   /* Adjust the Header container to fit the screen size */
   .header {
-    padding: 10px 16px; /* Reduce padding for mobile */
-    max-height: auto; /* Remove height restrictions */
-    justify-content: flex-start; /* Align items to the left */
-    position: relative; /* Ensure button can be positioned at the right */
+    padding: 10px 16px;
+    max-height: auto; 
+    justify-content: flex-start; 
+    position: relative;
   }
 
   /* Adjust other styling for mobile */
   .headerTitle {
-    font-size: 16px; /* Reduce font size for mobile screens */
+    font-size: 16px; 
   }
 
   .currency {
-    margin-top: 5px; /* Reduce top margin for better spacing */
+    margin-top: 5px; 
   }
 
   .addBalanceImage {
-    margin-right: 1rem; /* Reduce margin-right for better alignment */
+    margin-right: 1rem;
   }
 }

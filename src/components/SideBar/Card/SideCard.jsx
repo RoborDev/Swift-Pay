@@ -7,20 +7,20 @@ const BankDetailsCard = ({ toggleSideCard }) => {
   return (
     <div className={styles.sideCard}>
      <div className={styles.sideCardHeader}>
-  <h3>Your GBP Bank Account Details</h3>
+      <h3>Your GBP Bank Account Details</h3>
+        {/* Copy Button with Text */}
+        <button className={styles.copyButton}>
+          <span>Copy</span>
+          <img src={Copy} alt="Copy Icon" />
+        </button>
 
-  {/* Copy Button with Text */}
-  <button className={styles.copyButton}>
-     <span>Copy</span>
-    <img src={Copy} alt="Copy Icon" />
-  </button>
+        {/* Close Button */}
+        <button className={styles.closeButton} onClick={toggleSideCard}>
+          <img src={x} alt="Close" />
+        </button>
+    </div>
 
-  {/* Close Button */}
-  <button className={styles.closeButton} onClick={toggleSideCard}>
-    <img src={x} alt="Close" />
-  </button>
-</div>
-
+      <div className={styles.inbetween}>
       <div className={styles.sideCardCon}>
         <div className={styles.sideCardBody}>
           <div className={styles.cardRow}>
@@ -50,7 +50,7 @@ const BankDetailsCard = ({ toggleSideCard }) => {
           <div className={styles.cardRow}>
             <p className={styles.label}>Bank Address</p>
             <p className={styles.value}>
-              2nd Floor, Berkeley Square House, Berkeley Square, London W1J 5AP
+              2nd Floor, Berkeley Square House, Berkeley Square,<br /> London W1J 5AP
             </p>
           </div>
         </div>
@@ -61,6 +61,7 @@ const BankDetailsCard = ({ toggleSideCard }) => {
             <li>You'll be charged a 1% fee on payments made into this account.</li>
           </ul>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 /* Body.module.css */
 .bodyMain {
-  position: relative; /* Enable positioning for overlay */
+  position: relative; 
   background-color: #f6f7f8;
   width: 100%;
   border-radius: 28px;
-  min-height: 100vh; /* Ensure it covers the entire viewport */
+  /* min-height: 100vh;  */
   transition: background-color 0.3s ease;
 }
 
@@ -34,20 +34,22 @@
 .bodyContent {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: 0px;
   padding-bottom: 10px;
   position: relative; /* Ensure z-index works properly */
   z-index: 2; /* Keep content above overlay */
 }
 
 .leftColumn {
-  flex: 0 0 55%;
+  flex: 0 0 60%;
   width: 100%;
+  margin: 0;
 }
 
 .rightColumn {
-  flex: 0 0 45%;
+  flex: 0 0 40%;
   width: 100%;
+  margin: 0;
 }
 
 .transparentOverlay {
@@ -58,19 +60,42 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3); 
   backdrop-filter: blur(10px);
-  z-index: 1; /* Position it below the content */
-  pointer-events: none; /* Allow clicks to pass through */
+  z-index: 1; 
+  pointer-events: none; 
   transition: opacity 0.3s ease;
 }
 
 @media (max-width: 768px) {
   .bodyContent {
-    flex-direction: column; /* Stack columns vertically on smaller screens */
+    flex-direction: column; 
   }
 
   .leftColumn,
   .rightColumn {
     flex: 1 0 auto;
     width: 100%;
+  }
+}
+
+@media (min-width:1420px) {
+  .bodyContent {
+    margin-right: 0; 
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2; 
+    overflow: hidden;
+  }
+
+  .leftColumn {
+    flex: 0 0 65%;
+    margin: 0;
+  }
+
+  .rightColumn{
+    flex: 0 0 38.5%;
+    position: relative;
+    right: 64px;
   }
 }

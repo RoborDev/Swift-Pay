@@ -4,7 +4,7 @@
   background-color: #f6f7f8;
   width: 100%;
   border-radius: 28px;
-  min-height: 100vh; 
+  /* min-height: 100vh;  */
   transition: background-color 0.3s ease;
 }
 
@@ -70,12 +70,12 @@
 }
 
 .leftColumn {
-  flex: 0 0 55%;
+  flex: 0 0 60%;
   width: 100%;
 }
 
 .rightColumn {
-  flex: 0 0 45%;
+  flex: 0 0 40%;
   width: 100%;
 }
 

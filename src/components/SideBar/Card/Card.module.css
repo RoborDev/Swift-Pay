@@ -278,3 +278,16 @@
     width: 110%;
   }
 }
+
+@media screen and (min-width:1220px) {
+   .actionButtons{
+      justify-content: space-evenly;
+      margin-right: 20px;
+   }
+
+   .balanceSection {
+    text-align: center;
+    justify-content: space-around;
+  }
+  
+}

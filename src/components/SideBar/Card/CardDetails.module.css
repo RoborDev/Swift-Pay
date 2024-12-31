@@ -439,3 +439,10 @@ html, body {
 }
 
 }
+
+@media screen and (min-width: 1220px) {
+  .cardMain{
+    margin-left: 5px;
+  }
+
+}

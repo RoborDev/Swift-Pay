@@ -120,6 +120,7 @@ body {
 
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
+
   .sidebar-menu {
     display: flex;
     flex-direction: row;
@@ -158,7 +159,7 @@ body {
 
 
 /* Specific styles for the 390px to 430px range */
-@media (min-width: 390px) and (max-width: 430px) {
+@media (min-width: 330px) and (max-width: 500px) {
   .sidebar-header,
   .settings {
     display: none;
@@ -167,6 +168,7 @@ body {
   .sidebar-menu {
     display: flex;
     flex-direction: row;
+    height: 40px;
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
@@ -239,7 +241,7 @@ body {
   .active::before {
     content: "";
     position: absolute; 
-    top: -10px; 
+    top: 2px; 
     left: 50%; 
     transform: translateX(-50%);
     width: 100%; 
