@@ -116,11 +116,12 @@
 }
 
 
-@media(min-width:390px) and (max-width:430px) {
+@media (min-width: 390px) and (max-width: 430px) {
   .sideCardHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 10px;
   }
 
   .sideCardHeader h3 {
@@ -128,7 +129,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start; 
-    gap: 8px;
+    gap: 4px;
+    font-size: 16px; 
+    margin: 0; 
   }
 
   .sideCardHeader h3 span {
@@ -137,6 +140,8 @@
 
   .copyButton {
     margin-right: auto; 
+    font-size: 14px; 
+    padding: 5px 10px;
   }
 
   .closeButton {
@@ -146,17 +151,25 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 5px; /* Compact close button */
   }
 
   .sideCard {
-    width: 90%;
-    margin: 3px;
+    width: 95%; 
+    margin: 10px auto; 
+    border-radius: 12px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+    padding: 12px; 
+    box-sizing: border-box;
+    max-height: calc(100vh - 20px); 
+    overflow-y: auto; /* Allow scrolling for overflow content */
   }
 
   button span {
     display: none; 
+  }
 }
-}
+
 @media screen and (min-width: 1420px) {
   .sideCard {
     display: flex;
