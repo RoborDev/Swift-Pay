@@ -217,34 +217,41 @@
 /* Media Queries */
 @media screen and (max-width: 430px) {
   .cardMain {
-    width: 90%;
-    padding: 15px;
+    width: 100%; /* Adjust width to fill the screen */
+    padding: 10px; /* Reduce padding to minimize extra space */
+    margin: 0 auto; /* Center the card horizontally */
+    box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+    overflow: hidden; /* Prevent content overflow */
   }
 
   .currencyTabs {
-    gap: 10px;
-    padding: 10px 3px;
-    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to a new line if needed */
+    gap: 8px; /* Reduce gap to conserve space */
+    padding: 8px 5px; /* Reduce padding */
+    font-size: 11px; /* Slightly smaller font */
   }
 
   .currency img {
-    width: 16px;
-    height: 16px;
+    width: 14px; /* Reduce image size */
+    height: 14px;
   }
 
   .balanceAmount {
-    font-size: 24px;
+    font-size: 20px; /* Reduce font size for better fit */
+    line-height: 1.2; /* Adjust line-height for compactness */
   }
 
   .actionButtons {
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to a new row if needed */
+    gap: 8px; /* Reduce gap */
   }
 
   .actionIcon {
-    width: 40px;
-    height: 40px;
+    width: 36px; /* Reduce size of icons */
+    height: 36px;
   }
-
 
   .transactionsHeader {
     display: flex;
@@ -254,17 +261,18 @@
     border-bottom: 1px solid #e5e5e5;
   }
 
-  .currency.active{
-    font-size: 12px;
+  .currency.active {
+    font-size: 11px; /* Reduce font size */
   }
 
-  .details{
-    display: block;    
+  .details {
+    display: block; 
+    text-align: center; /* Center details for better layout */
   }
 
-  .detailsImage{
-    width: 20px;
-    height: 20px;
+  .detailsImage {
+    width: 18px; /* Adjust size for better fit */
+    height: 18px;
     margin: 0 auto;
     border-radius: 50%;
     display: flex;
@@ -274,10 +282,13 @@
   }
 
   .active::after {
-    bottom: -11px;
-    width: 110%;
+    bottom: -8px; /* Adjust position of underline */
+    width: 100%; /* Match underline width to active element */
   }
 }
+
+
+
 
 @media screen and (min-width:1220px) {
    .actionButtons{
