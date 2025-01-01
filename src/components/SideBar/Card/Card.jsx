@@ -90,7 +90,7 @@ function Card({ toggleSideCard }) {
 
           <div className={`${styles.action} ${styles.details}`}>
           <div
-              className={`${styles.actionIcon}`}
+              className={`${styles.actionIcon} ${styles.convert}`}
               onClick={toggleSideCard}
             >
             <img src={details} className={styles.detailsImage} alt="Details" />

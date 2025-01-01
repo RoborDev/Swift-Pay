@@ -122,7 +122,7 @@
   color: white;
 }
 
-.add, .convert {
+.add, .convert  {
   background: white;
   border: 1.5px solid #dfe1e7;
 }
@@ -217,11 +217,11 @@
 /* Media Queries */
 @media screen and (max-width: 430px) {
   .cardMain {
-    width: 100%; /* Adjust width to fill the screen */
-    padding: 10px; /* Reduce padding to minimize extra space */
-    margin: 0 auto; /* Center the card horizontally */
-    box-sizing: border-box; /* Ensure padding doesn't affect overall width */
-    overflow: hidden; /* Prevent content overflow */
+    width: 100%; 
+    padding: 10px; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    overflow: hidden; 
   }
 
   .currencyTabs {
@@ -251,6 +251,7 @@
   .actionIcon {
     width: 36px; /* Reduce size of icons */
     height: 36px;
+    
   }
 
   .transactionsHeader {
@@ -262,12 +263,13 @@
   }
 
   .currency.active {
-    font-size: 11px; /* Reduce font size */
+    font-size: 11px; 
   }
 
   .details {
     display: block; 
-    text-align: center; /* Center details for better layout */
+    text-align: center; 
+    background: white;
   }
 
   .detailsImage {
@@ -278,7 +280,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
+    background-color: white;
   }
 
   .active::after {
