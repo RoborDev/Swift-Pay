@@ -358,7 +358,7 @@ html, body {
     display: block;
     transform: translateX(0);
     position: relative;
-    top: 20px;
+    top: 0;
     right: 6px;
     width: 100%;
     margin: 3px;
