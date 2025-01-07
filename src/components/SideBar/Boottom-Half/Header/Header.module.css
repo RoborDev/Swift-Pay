@@ -8,14 +8,13 @@
   /* width: 100%;  */
   max-height: 70px; 
   border-radius: 28px;
-  /* border-top-right-radius: 28px; */
   flex-wrap: wrap; 
   overflow: hidden; 
 }
 
 .headerContainer {
   border-top-left-radius: 28px;
-  width: 100%; /* Ensure the container takes full width */
+  width: 100%; 
 }
 
 /* Currency Section */
@@ -71,9 +70,12 @@
   /* Adjust the Header container to fit the screen size */
   .header {
     padding: 10px 16px;
-    max-height: auto; 
+    border-radius: 0; 
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
     justify-content: flex-start; 
     position: relative;
+   
   }
 
   /* Adjust other styling for mobile */

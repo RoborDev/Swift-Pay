@@ -24,21 +24,48 @@ const CardDetails = () => {
   }, []);
 
   const transactions = [
-    { name: "APPLE.COM", amount: "-$4.00", status: "Sent", date: "Today", icon: apple },
-    { name: "Card Funding", amount: "+$120.00", status: "Added", date: "18 March, 2024", icon: plus },
-    { name: "MOBBIN.COM", amount: "-$2.42", status: "Convert", date: "10 March, 2024", icon: store },
-    { name: "MOBBIN.COM", amount: "-$96.00", status: "Convert", date: "10 March, 2024", icon: store },
+    {
+      name: "APPLE.COM",
+      amount: "-$4.00",
+      status: "Sent",
+      date: "Today",
+      icon: apple,
+    },
+    {
+      name: "Card Funding",
+      amount: "+$120.00",
+      status: "Added",
+      date: "18 March, 2024",
+      icon: plus,
+    },
+    {
+      name: "MOBBIN.COM",
+      amount: "-$2.42",
+      status: "Convert",
+      date: "10 March, 2024",
+      icon: store,
+    },
+    {
+      name: "MOBBIN.COM",
+      amount: "-$96.00",
+      status: "Convert",
+      date: "10 March, 2024",
+      icon: store,
+    },
   ];
 
   return (
     <div className={styles.container}>
       {/* Overlay for Mobile Sidebar */}
       {isMobile && showSidebar && (
-        <div className={styles.overlay} onClick={() => setShowSidebar(false)}></div>
+        <div
+          className={styles.overlay}
+          onClick={() => setShowSidebar(false)}
+        ></div>
       )}
 
       {/* Main Card Section */}
-            <div
+      <div
         className={`${styles.cardMain} ${
           isMobile && showSidebar ? styles.hidden : ""
         }`}
@@ -87,7 +114,12 @@ const CardDetails = () => {
             <h3>Recent Transactions</h3>
             <div className={styles.headerRight}>
               <a href="/" className={styles.seeAll}>
-                See all <img src={right} className={styles.rightImg} alt="right arrow" />
+                See all{" "}
+                <img
+                  src={right}
+                  className={styles.rightImg}
+                  alt="right arrow"
+                />
               </a>
             </div>
           </div>
@@ -116,21 +148,24 @@ const CardDetails = () => {
 
       {/* Sidebar Section */}
       <div
-  className={`${styles.cardSidebar} ${
-    isMobile ? (showSidebar ? styles.mobileVisible : styles.mobileHidden) : styles.desktopVisible
-  }`}
->
-
-<div className={styles.sidebarHeader}>
-    <h3>Card Details</h3>
-    {/* Always render the close button on both mobile and desktop */}
-    <button 
-      className={styles.closeButton} 
-      onClick={() => setShowSidebar(false)}
-    >
-      <img src={x} alt="Close" />
-    </button>
-  </div>
+        className={`${styles.cardSidebar} ${
+          isMobile
+            ? showSidebar
+              ? styles.mobileVisible
+              : styles.mobileHidden
+            : styles.desktopVisible
+        }`}
+      >
+        <div className={styles.sidebarHeader}>
+          <h3>Card Details</h3>
+          {/* Always render the close button on both mobile and desktop */}
+          <button
+            className={styles.closeButton}
+            onClick={() => setShowSidebar(false)}
+          >
+            <img src={x} alt="Close" />
+          </button>
+        </div>
         <div className={styles.sidebarContent}>
           <div className={styles.cardRow}>
             <p className={styles.label}>Card Holder Name:</p>
