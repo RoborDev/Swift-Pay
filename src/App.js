@@ -12,8 +12,16 @@ function App() {
     <HelmetProvider>
       <Router>
         <Helmet>
-          <meta name="theme-color" content="#ffffff" />
-          <style>{`body { background-color: white; }`}</style>
+          {/* Theme Color for Android */}
+          <meta name="theme-color" content="#FF5733" />
+          {/* Enable web app mode on iOS */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
+          {/* Body background for visual consistency */}
+          <style>{`body { background-color: #FF5733; }`}</style>
         </Helmet>
         <div className="app">
           <div className="content">
