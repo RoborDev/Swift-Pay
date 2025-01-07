@@ -164,7 +164,7 @@
   }
 
   button span {
-    display: none;
+    display: block;
     color: #0f170f; 
   }
 }
