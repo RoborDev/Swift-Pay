@@ -5,9 +5,9 @@
   justify-content: space-around;
   background: white;
   border-radius: 16px;
-  padding: 18px;
-  width: 92%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px 25px;
+  width: 90%;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   margin-left: 5px ;
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #e0e0e0;
@@ -136,7 +136,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  /* gap: 15px; */
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -212,10 +213,11 @@
 .transactionAmount {
   text-align: right;
   font-weight: bold;
+  font-size: 14px;
 }
 
 /* Media Queries */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
   .cardMain {
     width: 100%; 
     padding: 10px; 
@@ -224,17 +226,23 @@
     overflow: hidden; 
   }
 
+  .currency{
+    font-size: 18px;
+  }
+
   .currencyTabs {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to a new line if needed */
-    gap: 8px; /* Reduce gap to conserve space */
-    padding: 8px 5px; /* Reduce padding */
-    font-size: 11px; /* Slightly smaller font */
+    flex-wrap: wrap; 
+    gap: 8px; 
+    padding: 15px 5px; 
+    font-size: 18px; /* Slightly smaller font */
+    justify-content: space-between;
   }
 
   .currency img {
-    width: 14px; /* Reduce image size */
-    height: 14px;
+    width: 18px; /* Reduce image size */
+    height: 18px;
+    margin-right: 8px;
   }
 
   .balanceAmount {
@@ -244,13 +252,14 @@
 
   .actionButtons {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap to a new row if needed */
-    gap: 8px; /* Reduce gap */
+    flex-wrap: wrap; 
+    gap: 1px; 
+    justify-content: space-evenly;
   }
 
   .actionIcon {
-    width: 36px; /* Reduce size of icons */
-    height: 36px;
+    width: 43px; /* Adjust size for better fit */
+    height: 43px;
     
   }
 
@@ -258,12 +267,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    padding: 5px;
     border-bottom: 1px solid #e5e5e5;
   }
 
+  .transactionDetails p{
+    font-weight: 300;
+  }
+
+  .transactionsList{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .transactionAmount{
+    font-weight: 500;
+  }
+
   .currency.active {
-    font-size: 11px; 
+    font-size: 18px; 
   }
 
   .details {
@@ -284,7 +307,7 @@
   }
 
   .active::after {
-    bottom: -8px; /* Adjust position of underline */
+    bottom: -16.5px; /* Adjust position of underline */
     width: 100%; /* Match underline width to active element */
   }
 }

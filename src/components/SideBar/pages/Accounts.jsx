@@ -4,6 +4,8 @@ import Body from "../Body/Body";
 import Navbar from "../Body/NavBar/NavBar";
 import Balance from "../Body/Balance/Balance";
 import styles from "./Accounts.module.css";
+import plus from "../../../Images/plus-sm.svg";
+import plusBlack from "../../../Images/plus-blac-sm.svg";
 
 function Accounts() {
   const [showSideCard, setShowSideCard] = useState(false);
@@ -12,7 +14,10 @@ function Accounts() {
   // Dynamic viewport height for mobile screens
   useEffect(() => {
     const setVH = () => {
-      document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
+      document.documentElement.style.setProperty(
+        "--vh",
+        `${window.innerHeight * 0.01}px`
+      );
     };
     setVH();
     window.addEventListener("resize", setVH);
@@ -45,7 +50,21 @@ function Accounts() {
               className={styles["add-balance-button"]}
               onClick={() => setShowSideCard(true)} // Show SideCard
             >
-              +Add New Balance
+              <span>
+                <img
+                  src={plus}
+                  alt="Test Plus Icon"
+                  className={styles.plusIcon}
+                />
+              </span>{" "}
+              <span>
+                <img
+                  src={plusBlack}
+                  alt="Test Plus Icon"
+                  className={styles.plusIconBlack}
+                />
+              </span>{" "}
+              Add New Balance
             </button>
           }
           setShowSideCard={setShowSideCard} // Pass state toggle function

@@ -35,6 +35,12 @@
   margin-right: 35px;
 }
 
+.plusIcon{
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
 /* Responsive Design for Mobile Screens (390px to 844px) */
 @media (min-width: 390px) and (max-width: 844px) {
   .swift {

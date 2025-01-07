@@ -10,7 +10,7 @@ import rightsm from "../../../Images/right-sm.svg";
 import Refresh from "../../../Images/Refresh.svg";
 import plus from "../../../Images/plus-regular.svg";
 import details from "../../../Images/Details.svg";
-import styles from './Card.module.css';
+import styles from "./Card.module.css";
 
 function Card({ toggleSideCard }) {
   const [activeCurrency, setActiveCurrency] = useState("GBP");
@@ -36,10 +36,38 @@ function Card({ toggleSideCard }) {
   };
 
   const transactions = [
-    { name: "Favour Dumnoi", amount: "200", currency: activeCurrency, status: "Sent", date: "Today", icon: Up2 },
-    { name: "EUR Balance", amount: "1400", currency: activeCurrency, status: "Added", date: "Today", icon: plus },
-    { name: "To USD Balance", amount: "629.23", currency: "USD", status: "Convert", date: "Today", icon: Refresh },
-    { name: "Chukwuemeka Dumnoi", amount: "350", currency: activeCurrency, status: "Sent", date: "Today", icon: Down },
+    {
+      name: "Favour Dumnoi",
+      amount: "200",
+      currency: activeCurrency,
+      status: "Sent",
+      date: "Today",
+      icon: Up2,
+    },
+    {
+      name: "EUR Balance",
+      amount: "1400",
+      currency: activeCurrency,
+      status: "Added",
+      date: "Today",
+      icon: plus,
+    },
+    {
+      name: "To USD Balance",
+      amount: "629.23",
+      currency: "USD",
+      status: "Convert",
+      date: "Today",
+      icon: Refresh,
+    },
+    {
+      name: "Chukwuemeka Dumnoi",
+      amount: "350",
+      currency: activeCurrency,
+      status: "Sent",
+      date: "Today",
+      icon: Down,
+    },
   ];
 
   return (
@@ -49,7 +77,9 @@ function Card({ toggleSideCard }) {
         {currencies.map(({ code, img }) => (
           <span
             key={code}
-            className={`${styles.currency} ${activeCurrency === code ? styles.active : ""}`}
+            className={`${styles.currency} ${
+              activeCurrency === code ? styles.active : ""
+            }`}
             onClick={() => handleCurrencyChange(code)}
           >
             <img src={img} alt={`${code} flag`} /> {code}
@@ -59,11 +89,15 @@ function Card({ toggleSideCard }) {
 
       {/* Balance Section */}
       <div className={styles.balanceSection}>
-        <p className={styles.balanceTitle}>{currencyData[activeCurrency].name} Balance</p>
+        <p className={styles.balanceTitle}>
+          {currencyData[activeCurrency].name} Balance
+        </p>
         <h2 className={styles.balanceAmount}>
           <sup>{currencyData[activeCurrency].symbol}</sup>
           {Math.floor(balance)}
-          <span className={styles.decimal}>.{(balance % 1).toFixed(2).substring(2)}</span>
+          <span className={styles.decimal}>
+            .{(balance % 1).toFixed(2).substring(2)}
+          </span>
         </h2>
 
         {/* Action Buttons */}
@@ -87,13 +121,16 @@ function Card({ toggleSideCard }) {
             <p>Convert</p>
           </div>
 
-
           <div className={`${styles.action} ${styles.details}`}>
-          <div
+            <div
               className={`${styles.actionIcon} ${styles.convert}`}
               onClick={toggleSideCard}
             >
-            <img src={details} className={styles.detailsImage} alt="Details" />
+              <img
+                src={details}
+                className={styles.detailsImage}
+                alt="Details"
+              />
             </div>
             <p>Details</p>
           </div>
@@ -113,12 +150,18 @@ function Card({ toggleSideCard }) {
         <ul className={styles.transactionsList}>
           {transactions.map((txn, index) => (
             <li key={index} className={styles.transaction}>
-              <div className={`${styles.transactionIcon} ${styles[txn.status.toLowerCase()]}`}>
+              <div
+                className={`${styles.transactionIcon} ${
+                  styles[txn.status.toLowerCase()]
+                }`}
+              >
                 <img src={txn.icon} alt={txn.status} />
               </div>
               <div className={styles.transactionDetails}>
                 <p>{txn.name}</p>
-                <span>{txn.status} · {txn.date}</span>
+                <span>
+                  {txn.status} · {txn.date}
+                </span>
               </div>
               <div className={styles.transactionAmount}>
                 {txn.amount} {txn.currency}
