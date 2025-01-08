@@ -38,7 +38,47 @@
   width: 20px;
   height: 20px;
   color: #fff;
+} 
+@media (min-width: 180px) and (max-width: 389px) {
+  .swift {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto 60px; 
+    grid-template-areas: 
+      "container"
+      "sidebar";
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .container {
+    padding: 0;
+    border-radius: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .sidebar {
+    display: block;
+    background-color: #f8f8f8;
+    border-top: 1px solid lightgray;
+    height: 60px;
+    width: 100%;
+  }
+
+  /* Add Balance Button Style */
+  .add-balance-button {
+    background-color: transparent;
+    color: #0f1017;
+    margin-right: 26px;
+  }
+
+  /* Hide Navbar on Mobile Screens */
+  .navbar {
+    display: none;
+  }
 }
+
 
 /* Responsive Design for Mobile Screens (390px to 844px) */
 @media (min-width: 390px) and (max-width: 844px) {

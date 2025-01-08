@@ -140,7 +140,7 @@
 }
 
 /* Media query for screen width between 390px and 430px */
-@media (min-width: 390px) and (max-width: 430px) {
+@media (min-width: 300px) and (max-width: 430px) {
   .rightSection {
     display: flex; /* Show the right section */
     align-items: center;

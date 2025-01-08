@@ -104,7 +104,7 @@
 }
 
 /* Additional Media Query for very small mobile devices (optional) */
-@media (min-width: 390px) and (max-width: 430px) {
+@media (min-width: 330px) and (max-width: 430px) {
   .addBalanceImage {
     top: -30px;
     left: -23px;
